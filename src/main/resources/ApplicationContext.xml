@@ -6,8 +6,8 @@
 
     <bean name="speakerRepository" class="com.MyProject.repository.StubSpeakerRepositoryImpl"/>
 
-    <bean name="speakerService" class="com.MyProject.service.SpeakerServiceImpl">
-        <constructor-arg index="0" ref="speakerRepository"/>
+    <bean name="speakerService" class="com.MyProject.service.SpeakerServiceImpl" autowire="constructor">
+        <!--constructor-arg index="0" ref="speakerRepository"/>-->
 
     </bean>
 </beans>
