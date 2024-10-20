@@ -6,4 +6,8 @@
 
     <bean name="speakerRepository" class="com.MyProject.repository.StubSpeakerRepositoryImpl"/>
 
+    <bean name="speakerService" class="com.MyProject.service.SpeakerServiceImpl">
+        <property name="speakerRepository" ref="speakerRepository"/>
+
+    </bean>
 </beans>
