@@ -1,4 +1,4 @@
-import com.MyProject.com.MyProject.model.SpeakerService;
+import com.MyProject.service.SpeakerService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

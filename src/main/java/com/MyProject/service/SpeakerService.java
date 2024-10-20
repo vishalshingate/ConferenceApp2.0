@@ -1,4 +1,4 @@
-package com.MyProject.com.MyProject.model;
+package com.MyProject.service;
 
 import com.MyProject.model.Speaker;
 

@@ -1,12 +1,5 @@
-import com.MyProject.com.MyProject.model.SpeakerService;
-import com.MyProject.com.MyProject.model.SpeakerServiceImpl;
-import com.MyProject.repository.SpeakerRepository;
-import com.MyProject.repository.StubSpeakerRepositoryImpl;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
 
 /**
  * Configuration class for Spring application context.
