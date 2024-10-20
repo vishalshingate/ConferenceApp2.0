@@ -35,9 +35,10 @@ public class AppConfig {
      * @return an instance of SpeakerServiceImpl
      */
     @Bean(name = "speakerService")
-    @Scope(value = BeanDefinition.SCOPE_PROTOTYPE)
+    @Scope(value = BeanDefinition.SCOPE_SINGLETON)
     public SpeakerService getSpeakerService() {
-        SpeakerServiceImpl service = new SpeakerServiceImpl(getSpeakerRepository());
+        //SpeakerServiceImpl service = new SpeakerServiceImpl(getSpeakerRepository());
+        SpeakerServiceImpl service = new SpeakerServiceImpl();
         return service;
     }
 
@@ -48,6 +49,7 @@ public class AppConfig {
      */
     @Bean(name = "speakerRepository")
     public SpeakerRepository getSpeakerRepository() {
+        System.out.println("Im here speakerRepository");
         return new StubSpeakerRepositoryImpl();
     }
 }
