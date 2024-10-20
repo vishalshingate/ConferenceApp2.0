@@ -4,6 +4,7 @@ import com.MyProject.repository.SpeakerRepository;
 import com.MyProject.repository.StubSpeakerRepositoryImpl;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
@@ -19,6 +20,7 @@ import org.springframework.context.annotation.Scope;
  * - Dependency Injection: The beans defined in the @Configuration class can be injected into other Spring-managed components.
  */
 @Configuration
+@ComponentScan({"com.MyProject"})
 public class AppConfig {
 
     /**
@@ -34,22 +36,22 @@ public class AppConfig {
      *
      * @return an instance of SpeakerServiceImpl
      */
-    @Bean(name = "speakerService")
+   /* @Bean(name = "speakerService")
     @Scope(value = BeanDefinition.SCOPE_SINGLETON)
     public SpeakerService getSpeakerService() {
         //SpeakerServiceImpl service = new SpeakerServiceImpl(getSpeakerRepository());
         SpeakerServiceImpl service = new SpeakerServiceImpl();
         return service;
-    }
+    }*/
 
     /**
      * Creates a bean for SpeakerRepository.
      *
      * @return an instance of StubSpeakerRepositoryImpl
      */
-    @Bean(name = "speakerRepository")
+  /*  @Bean(name = "speakerRepository")
     public SpeakerRepository getSpeakerRepository() {
-        System.out.println("Im here speakerRepository");
+        System.out.println("Im here speakerRepository bean");
         return new StubSpeakerRepositoryImpl();
-    }
+    }*/
 }

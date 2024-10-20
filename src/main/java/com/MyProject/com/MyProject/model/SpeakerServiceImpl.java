@@ -3,10 +3,17 @@ package com.MyProject.com.MyProject.model;
 import com.MyProject.model.Speaker;
 import com.MyProject.repository.SpeakerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 
 import java.util.List;
 
+@Service("speakerService") // this name in the bracket is purely a personal preference you don't have to do this
+@Scope(value = BeanDefinition.SCOPE_SINGLETON)
 public class SpeakerServiceImpl implements SpeakerService {
     private SpeakerRepository repository ;
 
