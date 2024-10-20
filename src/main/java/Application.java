@@ -1,5 +1,5 @@
-import com.MyProject.com.MyProject.model.SpeakerService;
-import com.MyProject.com.MyProject.model.SpeakerServiceImpl;
+import com.MyProject.service.SpeakerService;
+import com.MyProject.service.SpeakerServiceImpl;
 
 public class Application {
 
