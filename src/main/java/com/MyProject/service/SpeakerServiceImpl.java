@@ -18,6 +18,7 @@ public class SpeakerServiceImpl implements SpeakerService {
     public SpeakerServiceImpl() {
         System.out.println(" We are in SpeakerServiceImpl no org constructor.");
     }
+    @Autowired
     public SpeakerServiceImpl(SpeakerRepository repository) {
         System.out.println(" We are in SpeakerServiceImpl Repository constructor.");
         this.repository = repository;
@@ -28,10 +29,10 @@ public class SpeakerServiceImpl implements SpeakerService {
         return repository.findAll();
     }
 
-    @Autowired
+   /* @Autowired
     public void setRepository(SpeakerRepository repository) {
         System.out.println(" We are in SpeakerServiceImpl In a Setter");
         this.repository = repository;
-    }
+    }*/
 
 }
