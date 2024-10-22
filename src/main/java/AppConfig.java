@@ -1,5 +1,9 @@
+import com.MyProject.util.CalenderFactory;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+
+import java.util.Calendar;
 
 /**
  * Configuration class for Spring application context.
@@ -15,6 +19,20 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan({"com.MyProject"})
 public class AppConfig {
+
+    @Bean(name = "cal")
+
+    public CalenderFactory calFactory() {
+        CalenderFactory factory = new CalenderFactory();
+        factory.addDays(2);
+        return factory;
+    }
+
+    @Bean
+    public Calendar cal() throws Exception{
+        return calFactory().getObject();
+    }
+
 
     /**
      * Creates a bean for SpeakerService.
